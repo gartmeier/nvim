@@ -1,3 +1,5 @@
+vim.keymap.set('n', '\\', ';', { noremap = true })
+
 return {
   {
     'otavioschwanck/arrow.nvim',
