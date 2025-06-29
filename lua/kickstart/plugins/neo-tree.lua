@@ -11,9 +11,14 @@ return {
   },
   lazy = false,
   keys = {
+    { '<leader>e', ':Neotree toggle position=right<CR>', desc = 'Toggle NeoTree', silent = true },
     { '\\', ':Neotree reveal<CR>', desc = 'NeoTree reveal', silent = true },
   },
   opts = {
+    window = {
+      position = 'right',
+      width = 35,
+    },
     filesystem = {
       window = {
         mappings = {
