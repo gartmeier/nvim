@@ -904,6 +904,7 @@ require('lazy').setup({
   -- Auto dark mode plugin
   {
     'f-person/auto-dark-mode.nvim',
+    priority = 1100, -- Load before catppuccin to prevent flickering
     opts = {
       update_interval = 1000,
       set_dark_mode = function()
