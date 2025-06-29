@@ -167,6 +167,18 @@ vim.o.cursorline = true
 -- Show rulers at 80 and 120 characters
 vim.opt.colorcolumn = { 80, 120 }
 
+-- Make rulers more subtle
+vim.api.nvim_create_autocmd('ColorScheme', {
+  desc = 'Customize colorcolumn appearance',
+  group = vim.api.nvim_create_augroup('colorcolumn-style', { clear = true }),
+  callback = function()
+    vim.api.nvim_set_hl(0, 'ColorColumn', { bg = '#2a2a2a' })
+  end,
+})
+
+-- Apply immediately for current colorscheme
+vim.api.nvim_set_hl(0, 'ColorColumn', { bg = '#2a2a2a' })
+
 -- Minimal number of screen lines to keep above and below the cursor.
 vim.o.scrolloff = 10
 
