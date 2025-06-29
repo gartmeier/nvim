@@ -165,7 +165,7 @@ vim.o.inccommand = 'split'
 vim.o.cursorline = true
 
 -- Show rulers at 80 and 120 characters
-vim.opt.colorcolumn = { 80, 120 }
+-- vim.opt.colorcolumn = { 80, 120 }
 
 -- Minimal number of screen lines to keep above and below the cursor.
 vim.o.scrolloff = 10
