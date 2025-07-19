@@ -24,6 +24,7 @@ return {
         hide_gitignored = false, -- Show gitignored files
         hide_by_name = {
           '__pycache__',
+          '.claude',
           '.DS_Store',
           '.idea',
           '.ruff_cache',
