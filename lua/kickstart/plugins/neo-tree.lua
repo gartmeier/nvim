@@ -19,7 +19,7 @@ return {
     },
     filesystem = {
       filtered_items = {
-        visible = true, -- Show hidden files by default
+        visible = false, -- Hide filtered items by default
         hide_dotfiles = false, -- Show dotfiles (files starting with .)
         hide_gitignored = false, -- Show gitignored files
         hide_by_name = {
