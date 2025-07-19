@@ -27,6 +27,7 @@ return {
           '.DS_Store',
           '.idea',
           '.ruff_cache',
+          '.venv',
           'node_modules',
           'thumbs.db',
         },
