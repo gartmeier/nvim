@@ -19,23 +19,8 @@ return {
     },
     filesystem = {
       filtered_items = {
-        visible = false, -- Hide filtered items by default
-        hide_dotfiles = false, -- Show dotfiles (files starting with .)
-        hide_gitignored = false, -- Show gitignored files
-        hide_by_name = {
-          '__pycache__',
-          '.claude',
-          '.DS_Store',
-          '.idea',
-          '.ruff_cache',
-          '.venv',
-          'node_modules',
-          'thumbs.db',
-        },
-        hide_by_pattern = {
-          '*.pyc',
-          '*.pyo',
-          '*.tmp',
+        always_show_by_pattern = {
+          '.env*',
         },
       },
       window = {
