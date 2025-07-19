@@ -18,9 +18,26 @@ return {
       position = 'right',
     },
     filesystem = {
+      filtered_items = {
+        visible = true, -- Show hidden files by default
+        hide_dotfiles = false, -- Show dotfiles (files starting with .)
+        hide_gitignored = false, -- Show gitignored files
+        hide_by_name = {
+          '__pycache__',
+          '.DS_Store',
+          'thumbs.db',
+          'node_modules',
+        },
+        hide_by_pattern = {
+          '*.pyc',
+          '*.pyo',
+          '*.tmp',
+        },
+      },
       window = {
         mappings = {
           ['\\'] = 'close_window',
+          ['H'] = 'toggle_hidden', -- Toggle hidden files with H key
         },
       },
     },
