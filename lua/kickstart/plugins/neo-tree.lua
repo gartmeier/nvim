@@ -25,8 +25,10 @@ return {
         hide_by_name = {
           '__pycache__',
           '.DS_Store',
-          'thumbs.db',
+          '.idea',
+          '.ruff_cache',
           'node_modules',
+          'thumbs.db',
         },
         hide_by_pattern = {
           '*.pyc',
