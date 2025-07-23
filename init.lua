@@ -444,11 +444,18 @@ require('lazy').setup({
         --
         defaults = {
           file_ignore_patterns = { 
-            "node_modules/", 
             ".git/", 
-            "__pycache__/"
+            ".venv/",
+            "__pycache__/",
+            "node_modules/"
           },
-          hidden = true,
+        },
+        pickers = {
+          find_files = {
+            hidden = true,
+            no_ignore = true,
+            no_ignore_parent = true,
+          },
         },
         extensions = {
           ['ui-select'] = {
