@@ -22,6 +22,7 @@ return {
         always_show_by_pattern = {
           '.env*',
         },
+        show_hidden_count = false,
       },
       window = {
         mappings = {
