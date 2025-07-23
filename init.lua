@@ -445,6 +445,8 @@ require('lazy').setup({
         defaults = {
           file_ignore_patterns = { 
             ".git/", 
+            ".pytest_cache/",
+            ".ruff_cache/",
             ".venv/",
             "__pycache__/",
             "node_modules/"
