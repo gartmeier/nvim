@@ -445,6 +445,7 @@ require('lazy').setup({
         defaults = {
           file_ignore_patterns = { 
             ".git/", 
+            ".idea/",
             ".pytest_cache/",
             ".ruff_cache/",
             ".venv/",
