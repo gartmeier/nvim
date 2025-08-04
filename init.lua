@@ -442,24 +442,6 @@ require('lazy').setup({
         -- You can put your default mappings / updates / etc. in here
         --  All the info you're looking for is in `:help telescope.setup()`
         --
-        defaults = {
-          file_ignore_patterns = { 
-            ".git/", 
-            ".idea/",
-            ".pytest_cache/",
-            ".ruff_cache/",
-            ".venv/",
-            "__pycache__/",
-            "node_modules/"
-          },
-        },
-        pickers = {
-          find_files = {
-            hidden = true,
-            no_ignore = true,
-            no_ignore_parent = true,
-          },
-        },
         extensions = {
           ['ui-select'] = {
             require('telescope.themes').get_dropdown(),
@@ -958,7 +940,6 @@ require('lazy').setup({
       end,
     },
   },
-
 
   -- Highlight todo, notes, etc in comments
   { 'folke/todo-comments.nvim', event = 'VimEnter', dependencies = { 'nvim-lua/plenary.nvim' }, opts = { signs = false } },
