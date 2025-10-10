@@ -31,7 +31,10 @@ return {
       window = {
         mappings = {
           ['\\'] = 'close_window',
-          ['H'] = 'toggle_hidden', -- Toggle hidden files with H key
+          ['H'] = 'toggle_hidden',
+          ['<C-f>'] = function()
+            vim.cmd 'silent !tmux neww tmux-sessionizer'
+          end,
         },
       },
     },

@@ -219,6 +219,9 @@ vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper win
 vim.keymap.set('n', '[b', ':bprev<CR>', { desc = 'Previous buffer' })
 vim.keymap.set('n', ']b', ':bnext<CR>', { desc = 'Next buffer' })
 
+-- Tmux sessionizer
+vim.keymap.set('n', '<C-f>', '<cmd>silent !tmux neww tmux-sessionizer<CR>', { desc = 'Tmux sessionizer' })
+
 -- NOTE: Some terminals have colliding keymaps or are not able to send distinct keycodes
 -- vim.keymap.set("n", "<C-S-h>", "<C-w>H", { desc = "Move window to the left" })
 -- vim.keymap.set("n", "<C-S-l>", "<C-w>L", { desc = "Move window to the right" })
@@ -920,26 +923,27 @@ require('lazy').setup({
     config = function()
       -- Setup catppuccin with both variants
       require('catppuccin').setup()
-      -- Initial colorscheme will be set by auto-dark-mode
+      -- Set catppuccin-mocha as the colorscheme
+      vim.cmd.colorscheme 'catppuccin-mocha'
     end,
   },
 
-  -- Auto dark mode plugin
-  {
-    'f-person/auto-dark-mode.nvim',
-    priority = 1100, -- Load before catppuccin to prevent flickering
-    opts = {
-      update_interval = 1000,
-      set_dark_mode = function()
-        vim.api.nvim_set_option_value('background', 'dark', {})
-        vim.cmd.colorscheme 'catppuccin-mocha'
-      end,
-      set_light_mode = function()
-        vim.api.nvim_set_option_value('background', 'light', {})
-        vim.cmd.colorscheme 'catppuccin-latte'
-      end,
-    },
-  },
+  -- Auto dark mode plugin (disabled)
+  -- {
+  --   'f-person/auto-dark-mode.nvim',
+  --   priority = 1100, -- Load before catppuccin to prevent flickering
+  --   opts = {
+  --     update_interval = 1000,
+  --     set_dark_mode = function()
+  --       vim.api.nvim_set_option_value('background', 'dark', {})
+  --       vim.cmd.colorscheme 'catppuccin-mocha'
+  --     end,
+  --     set_light_mode = function()
+  --       vim.api.nvim_set_option_value('background', 'light', {})
+  --       vim.cmd.colorscheme 'catppuccin-latte'
+  --     end,
+  --   },
+  -- },
 
   -- Highlight todo, notes, etc in comments
   { 'folke/todo-comments.nvim', event = 'VimEnter', dependencies = { 'nvim-lua/plenary.nvim' }, opts = { signs = false } },
